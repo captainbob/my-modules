@@ -1,0 +1,42 @@
+@charset "utf-8";
+@p100: 100%;
+// 隐藏显示的项（为显示选择的项目数量）
+.dj-hide-select-item {
+    ul {
+        li {
+            display: none;
+            &:last-child {
+                display: inline-block;
+            }
+        }
+        [data-tip] {
+            input {
+                width: 0.75em;
+                color: #999999;
+            }
+            &:before {
+                content: attr(data-tip);
+                padding-right: .5em;
+            }
+            &>* {
+                display: inline-block !important;
+                width: auto;
+            }
+        }
+    }
+    position: relative;
+    & .ant-select-selection__rendered li {
+        position: absolute;
+        left: -9999999px;
+    }
+    & .cur-select-text {
+        line-height: 28px;
+        padding-left: 10px;
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        &[data-value="全部"] {
+            color: #CCCCCC;
+        }
+    }
+}

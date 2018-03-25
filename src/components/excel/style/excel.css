@@ -1,0 +1,16 @@
+.excel .fileSelect:hover{
+    border: 1px solid #aaa !important;
+}
+.djmodules-excel-pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.ant-progress-text {
+    width: 2.7em !important;
+}
+.ant-progress-outer {
+    width: 90% !important;
+}
+.ant-progress-line {
+    width: 90% !important;
+}

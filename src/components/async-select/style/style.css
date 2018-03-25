@@ -1,0 +1,19 @@
+@charset "utf-8";
+.dj-hide-select-item ul li {
+  display: none;
+}
+.dj-hide-select-item ul li:last-child {
+  display: inline-block;
+}
+.dj-hide-select-item ul [data-tip] input {
+  width: 0.75em;
+  color: #999999;
+}
+.dj-hide-select-item ul [data-tip]:before {
+  content: attr(data-tip);
+  padding-right: .5em;
+}
+.dj-hide-select-item ul [data-tip] > * {
+  display: inline-block !important;
+  width: auto;
+}

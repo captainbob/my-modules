@@ -1,0 +1,56 @@
+.dj-table {
+    font-size:12px;
+    width: 100%;
+}
+
+.dj-table-th {
+    background: #f3f3f3;
+    padding: 12px;
+    text-align: left;
+}
+
+.dj-table-td {
+    border-bottom: 1px solid #f3f3f3;
+    background: white;
+    padding-left: 12px;
+    padding-right:12px;
+    padding-top:8px;
+    padding-bottom:8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.dj-table > tbody:hover .dj-table-td, .dj-table > tbody:hover .dj-table-row-header  {
+    background:#ecf6fd;
+}
+
+.dj-table-no-data {
+    text-align: center;
+    padding:12px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.dj-table-row-header {
+    padding: 12px;
+    padding-top:4px;
+    padding-bottom: 4px;
+    background: #f3f3f3;
+}
+
+.dj-table-row-blank {
+    height: 8px;
+}
+
+.dj-table-text-left {
+    text-align: left;
+}
+
+.dj-table-text-center {
+    text-align: center;
+}
+
+.dj-table-text-right {
+    text-align: right;
+}
+
+

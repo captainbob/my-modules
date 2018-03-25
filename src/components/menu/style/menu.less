@@ -1,0 +1,329 @@
+@header-height:50px;
+@color-hightlight:#f4424e;
+@sider0-width:60px;
+@sider1-width:150px;
+@module-height:50px;
+@menu-height:37px;
+
+#root {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.dj-menu {
+    height: 100%;
+    position: relative;
+    background: #f3f3f3;
+
+    &-logo {
+        width: @sider0-width + @sider1-width;
+        float: left;
+        height: @header-height;
+        background: rgb(26, 29, 35);
+        color:@color-hightlight;
+        text-align: center;
+        line-height: @header-height;
+        vertical-align: middle;
+        font-size: 20px;
+        border-right: 1px solid #000;
+    }
+
+    &-header-menu {
+        margin-left: @sider0-width + @sider1-width;
+        height: 100%;
+        position: relative;
+    }
+
+    &-header {
+        height: @header-height;  
+        background: #343842;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        overflow: hidden;
+    }
+
+    &-body {
+        left: 0px;
+        right: 0px;
+        top: @header-height;
+        bottom: 0px;
+        position: absolute;
+    }
+
+    &-sider0 {
+        background: #343842;
+        width: @sider0-width;
+        height: 100%;
+        float: left;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &-sider1 {
+        height: 100%;
+        background: white;
+        float: left;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        transition: width 0.25s;
+        -moz-transition: width 0.25s;	/* Firefox 4 */
+        -webkit-transition: width 0.25s;	/* Safari 和 Chrome */
+        -o-transition: width 0.25s;
+    }
+
+   &-sider1-wapper {
+       overflow-x: hidden; overflow-y: auto; height: 100%; width: 150px
+    }
+
+    &-sider1-open {
+        width: @sider1-width;
+    }
+
+    &-sider1-close {
+        width: 0px;
+    }
+
+    &-separator {
+        width: 10px;
+        height: 100%;
+        float: left;
+    }
+
+    &-content {
+        height: 100%;
+        overflow-y: auto;
+        background: white;
+        position:relative;
+    }
+
+    &-clear {
+        clear: both;
+    }
+
+    &-sider0-menu, &-collapse {
+        height: @module-height;
+        width: 100%;
+        text-align: center;
+        padding-top:7px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        color:#fff;
+        cursor: pointer;
+    }
+    &-sider0::-webkit-scrollbar-track-piece {
+        width: 1px;
+        background-color: #f5f5f5;
+    }
+
+    &-sider0::-webkit-scrollbar {
+        width: 1px;
+        height: 6px;
+    }
+
+    &-sider0::-webkit-scrollbar-thumb {
+        height: 50px;
+        background: #2e323b;
+        cursor: pointer;
+    }
+
+    &-sider0::-webkit-scrollbar-thumb:hover {
+        background: #2e323b;
+        cursor: pointer
+    }
+
+
+    &-collapse {
+        height: 30px;
+        line-height: 30px;
+        padding:0px;
+        vertical-align: middle;
+        opacity: 0.8;
+        background: rgb(26, 29, 35);
+        display: table-cell;
+        width: @sider0-width;
+    }
+
+    &-sider0-menu:hover {
+        color:white;
+        background: rgba(255, 255, 255,0.1);
+    }
+
+    &-sider0-menu > i {
+        font-size: 15px;
+    }
+
+    &-sider0-menu-selected, &-sider0-menu-selected:hover {
+        background: white !important;
+        color: @color-hightlight !important;
+    }
+
+    &-sider1-menu {
+        text-indent: 20px;
+        font-size: 13px;
+        margin-left: 10px;
+        margin-top: 2px;
+        border-radius: 6px;
+        height: @menu-height;
+        width: @sider1-width - 20;
+        line-height: @menu-height;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    &-sider1-wapper::-webkit-scrollbar-track-piece {
+        width: 2px;
+        background-color: #f5f5f5;
+    }
+
+    &-sider1-wapper::-webkit-scrollbar {
+        width: 2px;
+        height: 6px;
+    }
+
+    &-sider1-wapper::-webkit-scrollbar-thumb {
+        height: 50px;
+        background: #f4424e;
+        cursor: pointer;
+    }
+
+    &-sider1-wapper::-webkit-scrollbar-thumb:hover {
+        background: #f4424e;
+        cursor: pointer
+    }
+
+    &-sider1-menu:hover {
+        background: #f3f3f3;
+    }
+
+    &-sider1-menu a {
+        color: #414142;
+    }
+
+    &-sider1-menu-group {
+        padding: 10px 22px;
+        border-top: 1px #eee solid;
+        width: 130px;
+        margin-left: 10px;
+        margin-top: 5px;
+        color: #bbb;
+    }
+
+    &-sider1-menu-selected {
+        background: #f3f3f3;
+    }
+
+    &-sider1-menu-selected a{
+        color: @color-hightlight !important;
+    }
+
+    &-sider1-menu a:hover {
+        color: @color-hightlight !important;
+    }
+
+    &-top-left {
+        float: left;
+        height: @menu-height;
+    }
+    &-top-left a{
+        border-right: 1px solid #262b2f;
+    }
+    &-top-right {
+        float: right;
+        height: @menu-height;
+        min-width: 330px;
+    }
+
+    &-top-menu {
+        height: @header-height;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding-left:8px;
+        padding-right:8px;
+        color:#fff;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    &-right-top-menu-padding {
+        padding-left:16px;
+        padding-right:16px;
+        border-right: 1px solid #2a2f32;
+    }
+
+    &-top-menu:hover {
+        background: rgb(26, 29, 35);
+    }
+
+    &-top-left-menu:hover {
+        color:white !important;
+    }
+
+    &-top-menu, &-top-menu:visited, &-top-menu:active, &-top-menu:link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &-top-menu > a, &-top-menu > a:visited, &-top-menu > a:active ,&-top-menu > a:link {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+    }
+
+    &-top-menu > a:hover {
+       color: @color-hightlight; 
+       text-decoration: none;
+    }
+
+    &-top-menu:hover {
+        color: @color-hightlight;
+    }
+
+    &-top-menu:hover > a {
+       color: @color-hightlight; 
+    }
+
+    &-top-menu-fixed-width {
+        min-width: 60px;
+    }
+
+    &-rqcode {
+        text-align: center;
+    }
+
+    &-rqcode > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    &-userInfo-name {
+        color:rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+    }
+
+    &-userInfo-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        display: table-cell;
+    }
+
+    &-userInfo-edit {
+        cursor: pointer;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+
+    &-userInfo-edit:hover {
+        color: @color-hightlight
+    }
+
+    &-message-item {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,7 @@
+.item-container {
+  display: inline-block;
+  margin-right: 12px;
+}
+.ant-modal-body {
+  padding: 10px 16px;
+}
